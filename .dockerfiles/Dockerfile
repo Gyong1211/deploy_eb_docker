@@ -6,7 +6,7 @@ COPY        . /srv/deploy_eb_docker
 # 쉘에서 입력하는 cd /srv/deploy_eb_docker와 같은 명령어
 WORKDIR     /srv/deploy_eb_docker
 # requirements 설치
-RUN         /root/.pyenv/versions/deploy_eb_docker/bin/pip install -r .requirements/debug.txt
+RUN         /root/.pyenv/versions/deploy_eb_docker/bin/pip install -r .requirements/deploy.txt
 
 # supervisor file 복사
 COPY        .config/supervisor/uwsgi.conf /etc/supervisor/conf.d/
