@@ -5,6 +5,9 @@ config_secret_debug = json.loads(open(CONFIG_SECRET_DEBUG_FILE).read())
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(ROOT_DIR, '.static_root')
 
+MEDIA_ROOT = os.path.join(ROOT_DIR, '.media')
+MEDIA_URL='/media/'
+
 WSGI_APPLICATION = 'config.wsgi.debug.application'
 
 DEBUG = True

@@ -5,6 +5,9 @@ config_secret_deploy = json.loads(open(CONFIG_SECRET_DEPLOY_FILE).read())
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(ROOT_DIR, '.static_root')
 
+MEDIA_ROOT = os.path.join(ROOT_DIR, '.media')
+MEDIA_URL='/media/'
+
 WSGI_APPLICATION = 'config.wsgi.deploy.application'
 
 DEBUG = True
