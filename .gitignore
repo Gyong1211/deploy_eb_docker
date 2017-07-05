@@ -5,6 +5,7 @@
 *.idea
 .config_secret/
 static_root/
+.static_root/
 
 ### Django ###
 *.log
