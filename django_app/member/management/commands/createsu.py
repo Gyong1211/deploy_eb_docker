@@ -9,7 +9,7 @@ User = get_user_model()
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        config_secret_common = json.loads(open(settings.CONFIG_SECRET_COMMON_FILE)).read()
+        config_secret_common = json.loads(open(settings.CONFIG_SECRET_COMMON_FILE).read())
         username = config_secret_common['django']['default_superuser']['username']
         password = config_secret_common['django']['default_superuser']['password']
         if not User.objects.filter(username=username).exists():
