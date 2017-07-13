@@ -1,4 +1,4 @@
-FROM        eb_ubuntu
+FROM        gyong1211/eb_ubuntu
 MAINTAINER gyong1211@gmail.com
 
 # 현재 경로의 모든 파일(프로젝트 파일)을 컨테이너의 /srv/deploy_eb_docker 폴더에 복사
