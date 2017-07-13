@@ -18,7 +18,7 @@ COPY        .config/nginx/nginx-app.conf /etc/nginx/sites-available/nginx-app.co
 RUN         rm -rf /etc/nginx/sites-enabled/default
 RUN         ln -sf /etc/nginx/sites-available/nginx-app.conf /etc/nginx/sites-enabled/nginx-app.conf
 
-RUN         /root/.pyenv/versions/deploy_eb_docker/bin/python /srv/deploy_eb_docker/django_app/manage.py collectstatic --noinput --settings=config.settings.deploy
+#RUN         /root/.pyenv/versions/deploy_eb_docker/bin/python /srv/deploy_eb_docker/django_app/manage.py collectstatic --noinput --settings=config.settings.deploy
 
 CMD         supervisord -n
 
